@@ -780,10 +780,10 @@ input[type=number]
     line-height: 22px;
 
     display: flex;
-    align-content: center;
-    align-items: center;
+    align-content: flex-start;
+    align-items: flex-start;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: space-between;
 
     margin-top: 8px;
 
@@ -799,6 +799,14 @@ input[type=number]
 
     width: 20px;
     height: 20px;
+}
+
+
+.clinic_info .doctor .post span
+{
+    align-self: center;
+
+    width: calc(100% - 32px);
 }
 
 
