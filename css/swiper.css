@@ -1,0 +1,122 @@
+.swiper-button-next,
+.swiper-button-prev
+{
+    top: 0;
+    bottom: 0;
+
+    display: flex !important;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    width: 60px;
+    height: 60px;
+    margin: auto 0;
+
+    transition: .2s linear;
+    transform: none;
+
+    color: rgba(27, 140, 209, .25) !important;
+    border: 2px solid #fff !important;
+    border-radius: 50% !important;
+    background: #f0f9ff !important;
+}
+
+
+.swiper-button-prev
+{
+    left: -30px;
+}
+
+.swiper-button-next
+{
+    right: -30px;
+}
+
+
+.swiper-button-next:after,
+.swiper-button-prev:after
+{
+    display: none;
+}
+
+
+.swiper-button-next svg,
+.swiper-button-prev svg
+{
+    display: block;
+
+    width: 12px;
+    height: 22px;
+}
+
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover
+{
+    color: #fff !important;
+    background: #1b8cd1 !important;
+}
+
+
+
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet
+{
+    margin: 0;
+}
+
+
+
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction
+{
+    position: absolute;
+    bottom: -32px;
+    left: 0;
+
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    width: 100%;
+    height: 8px;
+
+    pointer-events: none;
+
+    gap: 12px;
+}
+
+
+.swiper-pagination-bullet
+{
+    display: block;
+
+    width: 8px;
+    height: 8px;
+
+    transition: background .2s linear;
+    pointer-events: auto;
+
+    opacity: 1;
+    border-radius: 50%;
+    background: #beeaff;
+}
+
+
+.swiper-pagination-bullet:hover,
+.swiper-pagination-bullet.active
+{
+    background: #1b8cd1;
+}
+
+
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet
+{
+    margin: 0;
+}

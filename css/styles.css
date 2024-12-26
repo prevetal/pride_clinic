@@ -1,0 +1,1380 @@
+/*-----------
+    Fonts
+-----------*/
+@font-face
+{
+    font-family: 'TT Drugs';
+    font-weight: normal;
+    font-style: normal;
+
+    font-display: swap;
+    src: url('../fonts/TTDrugs-Regular.woff2') format('woff2'),
+    url('../fonts/TTDrugs-Regular.woff') format('woff'),
+    url('../fonts/TTDrugs-Regular.ttf') format('truetype');
+}
+
+@font-face
+{
+    font-family: 'TT Drugs';
+    font-weight: 700;
+    font-style: normal;
+
+    font-display: swap;
+    src: url('../fonts/TTDrugs-Bold.woff2') format('woff2'),
+    url('../fonts/TTDrugs-Bold.woff') format('woff'),
+    url('../fonts/TTDrugs-Bold.ttf') format('truetype');
+}
+
+
+
+/*------------------
+    Reset styles
+------------------*/
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    scroll-margin-top: 24px;
+}
+
+*:before,
+*:after
+{
+    box-sizing: border-box;
+}
+
+html
+{
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+        -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+body
+{
+    margin: 0;
+
+    overscroll-behavior: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-overflow-scrolling: touch;
+    text-rendering: optimizeLegibility;
+    text-decoration-skip: objects;
+}
+
+img
+{
+    border-style: none;
+}
+
+textarea
+{
+    overflow: auto;
+}
+
+input,
+textarea,
+input:active,
+textarea:active,
+button
+{
+    margin: 0;
+
+    -webkit-border-radius: 0;
+            border-radius: 0;
+         outline: none transparent !important;
+    box-shadow: none;
+
+    -webkit-appearance: none;
+            appearance: none;
+    -moz-outline: none !important;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button
+{
+    margin: 0;
+
+    -webkit-appearance: none;
+}
+
+input[type=number]
+{
+    -moz-appearance: textfield;
+}
+
+:focus
+{
+    outline: 0;
+}
+
+:hover,
+:active
+{
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-touch-callout: none;
+}
+
+
+::-ms-clear
+{
+    display: none;
+}
+
+
+
+/*-----------------
+    Clinic info
+-----------------*/
+.clinic_info
+{
+    font-family: 'TT Drugs';
+
+    display: flex;
+    overflow: clip;
+    flex-direction: column;
+
+    padding-bottom: 64px;
+
+    gap: 64px;
+}
+
+
+.clinic_info button
+{
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+
+    display: inline-block;
+
+    cursor: pointer;
+    vertical-align: top;
+
+    color: inherit;
+    border: none;
+    background: none;
+}
+
+
+
+.clinic_info .block_title
+{
+    font-size: 28px;
+    line-height: calc(100% + 4px);
+
+    margin-bottom: 32px;
+
+    color: #25343f;
+}
+
+
+
+.clinic_info .main_data
+{
+    padding-bottom: 64px;
+}
+
+
+
+.clinic_info .main_data .clinic_name
+{
+    font-size: 30px;
+    font-weight: 700;
+    line-height: calc(100% + 10px);
+
+    display: block;
+
+    margin-bottom: 32px;
+
+    color: #25343f;
+}
+
+
+
+.clinic_info .main_data .row
+{
+    display: flex;
+    align-content: stretch;
+    align-items: stretch;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+
+.clinic_info .main_data .data
+{
+    display: flex;
+    flex-direction: column;
+
+    width: 408px;
+    max-width: 100%;
+
+    gap: 16px;
+}
+
+
+
+.clinic_info .main_data .item
+{
+    font-family: 'Roboto';
+    font-size: 19px;
+    line-height: 28px;
+
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    color: #25343f;
+}
+
+
+.clinic_info .main_data .item .icon
+{
+    display: block;
+
+    width: 24px;
+    height: 24px;
+}
+
+
+.clinic_info .main_data .item div
+{
+    width: calc(100% - 36px);
+}
+
+
+.clinic_info .main_data .item a
+{
+    white-space: nowrap;
+    text-decoration: none;
+
+    color: currentColor;
+}
+
+
+
+.clinic_info .main_data .metro
+{
+    font-family: 'Roboto';
+    font-size: 13px;
+    line-height: 18px;
+
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    margin-top: -4px;
+
+    color: #25343f;
+
+    gap: 6px 8px;
+}
+
+
+.clinic_info .main_data .metro > *
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+
+.clinic_info .main_data .metro img
+{
+    display: block;
+
+    width: 24px;
+    height: 24px;
+}
+
+
+.clinic_info .main_data .metro span
+{
+    margin-left: 4px;
+
+    color: #708690;
+}
+
+
+
+.clinic_info .main_data .line
+{
+    width: 100%;
+    height: 1px;
+    margin-top: 16px;
+
+    opacity: .5;
+    background: rgba(37, 52, 63, .50);
+}
+
+
+
+.clinic_info .main_data .clinic_services
+{
+    font-family: 'Roboto';
+    font-size: 16px;
+    line-height: 24px;
+
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    width: 293px;
+    max-width: 100%;
+
+    color: #25343f;
+
+    gap: 4px;
+}
+
+
+.clinic_info .main_data .clinic_services .sep
+{
+    width: 3px;
+    height: 3px;
+
+    border-radius: 50%;
+    background: rgba(37, 52, 63, .50);
+}
+
+
+
+.clinic_info .main_data .peyment_methods
+{
+    margin-top: 16px;
+}
+
+
+.clinic_info .main_data .peyment_methods .label
+{
+    font-family: 'Roboto';
+    font-size: 15px;
+    line-height: 22px;
+
+    margin-bottom: 8px;
+
+    color: #708690;
+}
+
+
+.clinic_info .main_data .peyment_methods .vals
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    gap: 16px;
+}
+
+
+.clinic_info .main_data .peyment_methods .vals img
+{
+    display: block;
+
+    width: 40px;
+    height: 40px;
+}
+
+
+
+.clinic_info .main_data .order_btn
+{
+    margin-top: auto;
+    padding-top: 16px;
+}
+
+
+.clinic_info .main_data .order_btn .btn
+{
+    font-family: 'Roboto';
+    font-size: 19px;
+    line-height: 28px;
+
+    height: 50px;
+    padding: 0 32px;
+
+    color: #fff;
+    border-radius: 48px;
+    background: #37a238;
+}
+
+
+
+.clinic_info .main_data .map_wrap
+{
+    display: flex;
+    flex-direction: column;
+
+    width: calc(100% - 440px);
+
+    gap: 32px;
+}
+
+
+.clinic_info .main_data .map_wrap #map
+{
+    position: relative;
+
+    overflow: hidden;
+
+    height: 480px;
+
+    border-radius: 15px;
+    background: #ddd;
+}
+
+
+.clinic_info .main_data .map_wrap .links
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    gap: 16px;
+}
+
+
+.clinic_info .main_data .map_wrap .links a
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    min-width: 180px;
+    height: 50px;
+    padding: 0 16px;
+
+    text-decoration: none;
+
+    color: currentColor;
+    border-radius: 24px;
+    background: #fff;
+    box-shadow: 0 0 24px 0 rgba(37, 52, 63, .16);
+}
+
+
+.clinic_info .main_data .map_wrap .links img
+{
+    display: block;
+
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+
+.clinic_info .about_info .row
+{
+    display: flex;
+    align-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+.clinic_info .about_info .data
+{
+    position: relative;
+    z-index: 5;
+
+    width: 465px;
+    max-width: 100%;
+}
+
+
+.clinic_info .about_info .desc
+{
+    font-family: 'Roboto';
+    font-size: 17px;
+    line-height: calc(100% + 7px);
+
+    position: relative;
+
+    overflow: hidden;
+
+    height: 167px;
+
+    color: #25343f;
+}
+
+
+.clinic_info .about_info .desc:after
+{
+    position: absolute;
+    z-index: 3;
+    bottom: 0;
+    left: 0;
+
+    display: block;
+
+    width: 100%;
+    height: 48px;
+
+    content: '';
+
+    background: linear-gradient(180deg, rgba(255, 255, 255, .00) 0%, #fff 100%);
+}
+
+
+.clinic_info .about_info .desc.show
+{
+    overflow: visible;
+
+    height: auto;
+}
+
+.clinic_info .about_info .desc.show:after
+{
+    display: none;
+}
+
+
+.clinic_info .about_info .spoler_btn
+{
+    font-family: 'Roboto';
+    font-size: 13px;
+    line-height: 18px;
+
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    margin-top: 8px;
+    padding: 3px 5px 3px 10px;
+
+    color: #3b5060;
+    border-radius: 20px;
+    background: #f0f9ff;
+
+    gap: 4px;
+}
+
+
+.clinic_info .about_info .spoler_btn span + span
+{
+    display: none;
+}
+
+
+.clinic_info .about_info .spoler_btn img
+{
+    display: block;
+
+    width: 20px;
+    height: 20px;
+
+    transition: transform .2s linear;
+}
+
+
+.clinic_info .about_info .spoler_btn.active span
+{
+    display: none;
+}
+
+.clinic_info .about_info .spoler_btn.active span + span
+{
+    display: block;
+}
+
+
+.clinic_info .about_info .spoler_btn.active img
+{
+    transform: rotate(180deg);
+}
+
+
+
+.clinic_info .about_info .images
+{
+    width: 564px;
+    max-width: 100%;
+}
+
+
+.clinic_info .about_info .swiper
+{
+    overflow: visible !important;
+}
+
+
+.clinic_info .about_info .swiper-slide
+{
+    position: relative;
+
+    visibility: hidden;
+
+    transition: opacity .2s linear, visibility .2s linear;
+    pointer-events: none;
+
+    opacity: 0;
+}
+
+
+.clinic_info .about_info .swiper-slide.visible
+{
+    visibility: visible;
+
+    pointer-events: auto;
+
+    opacity: 1;
+}
+
+
+.clinic_info .about_info .swiper-pagination
+{
+    display: none;
+}
+
+
+.clinic_info .about_info .image
+{
+    position: relative;
+
+    display: block;
+
+    padding-bottom: 66.541%;
+
+    text-decoration: none;
+
+    color: currentColor;
+    border-radius: 15px;
+    background: #ddd;
+}
+
+
+.clinic_info .about_info .image img
+{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    border-radius: inherit;
+
+    object-fit: cover;
+}
+
+
+
+.clinic_info .doctors
+{
+    padding: 64px 0;
+
+    background: #f0f9ff;
+}
+
+
+.clinic_info .doctors .swiper
+{
+    overflow: visible !important;
+}
+
+
+.clinic_info .doctors .swiper-slide
+{
+    position: relative;
+
+    visibility: hidden;
+
+    transition: opacity .2s linear, visibility .2s linear;
+    pointer-events: none;
+
+    opacity: 0;
+}
+
+
+.clinic_info .doctors .swiper-slide.visible
+{
+    visibility: visible;
+
+    pointer-events: auto;
+
+    opacity: 1;
+}
+
+
+.clinic_info .doctors .swiper-button-next,
+.clinic_info .doctors .swiper-button-prev
+{
+    top: 0;
+    bottom: auto;
+
+    margin: -30px 0 0;
+}
+
+
+.clinic_info .doctor .photo
+{
+    position: relative;
+
+    width: 300px;
+    max-width: 100%;
+    height: 300px;
+    margin-bottom: 20px;
+
+    border-radius: 10px;
+    background: #ddd;
+}
+
+
+.clinic_info .doctor .photo img
+{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    border-radius: inherit;
+
+    object-fit: cover;
+}
+
+
+.clinic_info .doctor .name
+{
+    font-size: 18px;
+    font-weight: 700;
+    line-height: calc(100% + 2px);
+
+    color: #25343f;
+}
+
+
+.clinic_info .doctor .post
+{
+    font-family: 'Roboto';
+    font-size: 15px;
+    line-height: 22px;
+
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    margin-top: 8px;
+
+    color: #3b5060;
+
+    gap: 12px;
+}
+
+
+.clinic_info .doctor .post img
+{
+    display: block;
+
+    width: 20px;
+    height: 20px;
+}
+
+
+
+.clinic_info .reviews
+{
+    margin: 0;
+}
+
+
+.clinic_info .reviews .swiper
+{
+    overflow: visible !important;
+}
+
+
+.clinic_info .reviews .swiper-slide
+{
+    position: relative;
+
+    visibility: hidden;
+
+    transition: opacity .2s linear, visibility .2s linear;
+    pointer-events: none;
+
+    opacity: 0;
+}
+
+
+.clinic_info .reviews .swiper-slide.visible
+{
+    visibility: visible;
+
+    pointer-events: auto;
+
+    opacity: 1;
+}
+
+
+.clinic_info .reviews .swiper-pagination
+{
+    display: none;
+}
+
+
+.clinic_info .review
+{
+    display: flex;
+    flex-direction: column;
+
+    padding: 24px;
+
+    text-align: center;
+
+    border-radius: 10px;
+    background: #f0f9ff;
+}
+
+
+.clinic_info .review .icon
+{
+    display: block;
+
+    width: 40px;
+    height: 40px;
+    margin: 0 auto 12px;
+}
+
+
+.clinic_info .review .text
+{
+    font-family: 'Roboto';
+    font-size: 17px;
+    line-height: calc(100% + 7px);
+
+    position: relative;
+
+    overflow: hidden;
+
+    height: 241px;
+
+    color: #25343f;
+}
+
+
+.clinic_info .review .text:after
+{
+    position: absolute;
+    z-index: 3;
+    bottom: 0;
+    left: 0;
+
+    display: block;
+
+    width: 100%;
+    height: 48px;
+
+    content: '';
+
+    background: linear-gradient(180deg, rgba(240, 249, 255, .00) 0%, #f0f9ff 100%);
+}
+
+
+.clinic_info .review .text.show
+{
+    overflow: visible;
+
+    height: auto;
+}
+
+.clinic_info .review .text.show:after
+{
+    display: none;
+}
+
+
+.clinic_info .review .spoler_btn
+{
+    font-family: 'Roboto';
+    font-size: 13px;
+    line-height: 18px;
+
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    margin: 8px auto 0;
+    padding: 3px 5px 3px 10px;
+
+    color: #3b5060;
+    border-radius: 20px;
+    background: #f0f9ff;
+
+    gap: 4px;
+}
+
+
+.clinic_info .review .spoler_btn span + span
+{
+    display: none;
+}
+
+
+.clinic_info .review .spoler_btn img
+{
+    display: block;
+
+    width: 20px;
+    height: 20px;
+
+    transition: transform .2s linear;
+}
+
+
+.clinic_info .review .spoler_btn.active span
+{
+    display: none;
+}
+
+.clinic_info .review .spoler_btn.active span + span
+{
+    display: block;
+}
+
+
+.clinic_info .review .spoler_btn.active img
+{
+    transform: rotate(180deg);
+}
+
+
+.clinic_info .review .author
+{
+    display: flex;
+    flex-direction: column;
+
+    margin-top: auto;
+    padding-top: 20px;
+
+    gap: 4px;
+}
+
+
+.clinic_info .review .author .name
+{
+    font-size: 18px;
+    font-weight: 700;
+    line-height: calc(100% + 2px);
+
+    color: #3b5060;
+}
+
+
+.clinic_info .review .author .and,
+.clinic_info .review .author .date
+{
+    font-family: 'Roboto';
+    font-size: 13px;
+    line-height: 18px;
+
+    color: #3b5060;
+}
+
+
+
+.clinic_info .reviews .other
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    margin-top: 64px;
+    padding-top: 31px;
+
+    border-top: 1px solid rgba(37, 52, 63, .5);
+
+    gap: 32px;
+}
+
+
+.clinic_info .reviews .other .label
+{
+    font-family: 'Roboto';
+    font-size: 15px;
+    line-height: 22px;
+
+    color: #708690;
+}
+
+
+.clinic_info .reviews .other .links
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    gap: 16px;
+}
+
+
+.clinic_info .reviews .other a
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    min-width: 265px;
+    height: 50px;
+    padding: 0 16px;
+
+    text-decoration: none;
+
+    color: currentColor;
+    border-radius: 24px;
+    background: #fff;
+    box-shadow: 0 0 24px 0 rgba(37, 52, 63, .16);
+}
+
+
+.clinic_info .reviews .other .logo
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    width: 128px;
+    height: 24px;
+}
+
+
+.clinic_info .reviews .other .logo img
+{
+    display: block;
+
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+.clinic_info .reviews .other .rating
+{
+    font-family: 'Roboto';
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 22px;
+
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    padding: 0 12px;
+
+    color: #708690;
+
+    gap: 4px;
+}
+
+
+.clinic_info .reviews .other .rating img
+{
+    display: block;
+
+    width: 24px;
+    height: 24px;
+}
+
+
+
+@media print, (max-width: 1279px)
+{
+    .clinic_info .main_data .data
+    {
+        width: 360px;
+    }
+
+
+    .clinic_info .main_data .map_wrap
+    {
+        width: calc(100% - 400px);
+    }
+
+
+
+    .clinic_info .about_info .data
+    {
+        width: calc(100% - 390px);
+    }
+
+
+
+    .clinic_info .about_info .images
+    {
+        width: 350px;
+    }
+
+
+    .clinic_info .about_info .swiper-button-next,
+    .clinic_info .about_info .swiper-button-prev
+    {
+        display: none !important;
+    }
+
+
+    .clinic_info .about_info .swiper-pagination
+    {
+        display: flex;
+    }
+
+
+
+    .clinic_info .doctors .swiper-slide
+    {
+        visibility: visible;
+
+        width: 261px;
+
+        pointer-events: auto;
+
+        opacity: 1;
+    }
+
+
+    .clinic_info .doctors .swiper-button-next,
+    .clinic_info .doctors .swiper-button-prev
+    {
+        display: none !important;
+    }
+
+
+    .clinic_info .doctor .photo
+    {
+        width: 100%;
+        height: auto;
+        padding-bottom: 100%;
+    }
+
+
+    .clinic_info .reviews .swiper-button-next,
+    .clinic_info .reviews .swiper-button-prev
+    {
+        display: none !important;
+    }
+
+
+    .clinic_info .reviews .swiper-pagination
+    {
+        display: flex;
+    }
+}
+
+
+
+@media print, (max-width: 1023px)
+{
+    .clinic_info .main_data
+    {
+        padding-bottom: 20px;
+    }
+
+
+    .clinic_info .main_data .data
+    {
+        width: 354px;
+    }
+
+
+    .clinic_info .main_data .order_btn
+    {
+        margin-top: 0;
+    }
+
+
+    .clinic_info .main_data .map_wrap
+    {
+        width: calc(100% - 374px);
+    }
+
+
+    .clinic_info .main_data .map_wrap #map
+    {
+        height: 360px;
+    }
+
+
+    .clinic_info .main_data .map_wrap .links a
+    {
+        min-width: 192px;
+    }
+
+
+
+    .clinic_info .about_info .data
+    {
+        width: calc(100% - 374px);
+    }
+
+
+    .clinic_info .about_info .desc
+    {
+        height: 197px;
+    }
+
+
+
+    .clinic_info .reviews .other
+    {
+        gap: 20px;
+    }
+
+
+    .clinic_info .reviews .other .label
+    {
+        width: 100%;
+
+        text-align: center;
+    }
+}
+
+
+
+@media print, (max-width: 767px)
+{
+    .clinic_info
+    {
+        padding-bottom: 60px;
+
+        gap: 60px;
+    }
+
+
+    .clinic_info .block_title
+    {
+        font-size: 20px;
+        line-height: calc(100% + 2px);
+
+        margin-bottom: 20px;
+    }
+
+
+    .clinic_info .main_data
+    {
+        padding: 0;
+    }
+
+
+    .clinic_info .main_data .clinic_name
+    {
+        font-size: 22px;
+        line-height: calc(100% + 2px);
+
+        margin-bottom: 20px;
+    }
+
+
+    .clinic_info .main_data .data
+    {
+        width: 100%;
+    }
+
+
+    .clinic_info .main_data .item,
+    .clinic_info .main_data .order_btn .btn
+    {
+        font-size: 17px;
+        line-height: 24px;
+    }
+
+
+    .clinic_info .main_data .map_wrap
+    {
+        width: 100%;
+        margin-top: 32px;
+    }
+
+
+
+    .clinic_info .about_info .data
+    {
+        width: calc(100% - 374px);
+    }
+
+
+    .clinic_info .about_info .desc
+    {
+        height: 197px;
+    }
+
+
+
+    .clinic_info .about_info .data
+    {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+
+    .clinic_info .about_info .desc
+    {
+        font-size: 15px;
+    }
+
+
+    .clinic_info .about_info .images
+    {
+        width: 100%;
+    }
+
+
+
+    .clinic_info .doctors
+    {
+        padding: 30px 0;
+    }
+
+
+    .clinic_info .doctors .swiper-slide
+    {
+        width: 258px;
+    }
+
+
+
+    .clinic_info .review .text
+    {
+        font-size: 15px;
+    }
+}
